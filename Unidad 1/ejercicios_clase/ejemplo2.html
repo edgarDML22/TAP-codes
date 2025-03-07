@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ciudad{
+    background-color: #111;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+.ciudadSecundaria{
+    background-color: #dddddd;
+    color:gray;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+#ciudadId{
+    background-color: #171954;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+</style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+<!-- hr hace un espacio con una línea -->
+<!-- br sólo se hace un salto de línea -->
+<!-- <p> es un párrafo -->
+
+    <h1>Clases CSS</h1>
+    <div class = "ciudad"> <!-- Como pertenece a la clase recibe todo el estilo definido en style -->
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+        <img src = "London_Flag.jpg" width = "200">
+    </div>
+    
+    <div id="ciudadId">
+        <h2>Paris</h2>
+        <p style="color: red; font-weight: bold;">Paris is the capital of France.</p>
+        <img src = "eiffel_tower.jpg" width = "200">
+    </div>
+    
+    <div class="ciudad">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    <div class = "ciudadSecundaria">
+        <h2>Mexico city</h2>
+        <p>Mexico city is the capital of Mexico.</p>
+    
+    </div>   
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Imágenes en HTML</h2>
+    <div>
+        <img src="https://i.ytimg.com/vi/4vwcdgA0Xmk/maxresdefault.jpg" width="300" height = "200">
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/b89CnP0Iq30?si=MLbys4G_gFCgTvAJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Tables en HTML</h1>
+   <style type = "text/css">
+        th, td{
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 30px;
+            padding-right: 40px;
+            background-color: gray;
+        }
+        /* El hover permite cambiar el color de un elemento al pasar el mouse por encima */
+    td:hover {background-color: #1b6423;}
+   </style> 
+   <!-- colspan = "n" permite combinar n columnas en una sola -->
+   <table style="width:100%">
+    <tr>
+        <th  colspan="2">Person 1</th>
+        <th>Person 2</th>
+    </tr>
+    <tr>
+        <td>Juan</td>
+        <td>Pedro</td>
+        <td>Jose</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>14</td>
+        <td>Password<br><input type ="text" name = "" ></td>
+    </tr>
+   </table>
+
+   <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- placeholder="Escribe tu info" pone el texto claro como instruccion -->
+    <!-- disabled, readonly; No te deja escribir -->
+    <!-- autofocus; Pone el cursor en automatico en el input -->
+    <h2>Ejemplo con metodo Get</h2>
+    <form action="/action_page.php" id="form1" method="get"></form>
+        <label for="fname">First name:</label>
+        <input type ="text" id="fname" name="fname" placeholder="Escribe tu nombre" autofocus><br><br>
+        <input type = "submit" value = "Submit">
+    </form>
+    <h2> Ejemplo con metodo Post</h2>
+    <form action = "action_page.php" id = "form1" method = "post">
+        <label for="fname">First name:</label>
+        <input type = "text" id="fname" name="fname"><br><br>
+        <input type = "submit" value="Submit">
+
+
+    </form>
+
+    <br><br>
+    
+    <h1>Ejemplo Eventos</h1>
+    <div class = "pedrito">
+    <h4>Onchange</h4>
+    <input type="text" id="evento1" onchange="upperCase()"><!-- El nombre de upperCase puede cambiar -->
+    <script>
+    function upperCase(){
+        const x = document.getElementById("evento1");
+        x.value = x.value.toUpperCase();
+    }
+
+    </script>
+    <br><hr>
+    </div>
+
+    <h4>Onmouseover</h4>
+   <div  onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color: #ddd123; 
+    width: 120px; height: 20px; padding: 40px;"> Pasa el mouse sobre mi </div> 
+    <script>
+        function mOver(obj){
+            obj.innerHTML = "Gracias"
+        }
+        function mOut(obj){
+            obj.innerHTML = "Pasa el mouse sobre mi"
+        }
+    </script>
+    <br> <hr> 
+    <h4>Onmousedown y on mouseup</h4>
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D61673;
+    width:90px;height:20px; padding:40px">
+    
+    <script>
+        function mDown(obj){
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHTML = "Gracias";
+        }
+        function mUp(obj){
+            obj.style.backgroundColor = "#D61673"
+            obj.innerHTML="Haz click";
+        }
+    </script>
+    </div>
+
+    <br><hr>
+
+    <h4>Onfocus</h4>
+    <input type="text" onfocus="onfocusFn(this)" onblur="onBlurFn(this)">
+    <script>
+    function onfocusFn(z){
+        z.style.bacground = "green";
+    }
+    function onBlurFn(obj4){
+        obj4.style.background = "white";
+    }
+    </script>
+
+    <br><hr>
+    <h4>OnKeyUp</h4>
+    <input type="text" onkeyup="onfocusFn(alert('Han proporcionado una tecla dentro de este input'))">
+
+   <br><hr> 
+
+    <h4>EventListener</h4>
+    <input type ="button" id="myBtn" value = "Dame click!!!">
+    <script type = "text/javascript">
+        document.getElementById("myBtn").addEventListener("click", function(){ alert("Ejemplo de una alerta"); });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+

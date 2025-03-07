@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <!-- Uso de CANVAS -->
+    <h1> CANVAS </h1>
+    <h2>Líneas</h2>
+    <canvas id = "myCanvas" width ="500" height="400" style="border:1px solid #ddd;">
+        Navegador no soporta canvas.
+
+    </canvas> 
+    <script type="text/javascript">
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(500, 400);
+        ctx.stroke();
+    </script>
+
+
+
+    <br><hr><br>
+    <h2> Circulos </h2>
+    <canvas id = "myCanvas2" width="300" height="300" style="border:1px solid #ddd">
+        <script type="text/javascript">
+            var c = document.getElementById("myCanvas2");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.beginPath();
+            ctx.arc(150,150,80,0,(2)*Math.PI);   
+            ctx.fillStyle = "green";
+            ctx.fill();         
+            ctx.stroke();
+        </script>
+    </canvas>
+
+    <br><hr><br>
+    <canvas id="myCanvas3" width="500" height="300" style="border:1px solid green;">
+        <!-- Texto -->
+        <script type="text/javascript">
+            var c = document.getElementById("miCanvas3");
+            var ctx = c.getContext("2d");
+            ctx.font = "60px Arial";
+            ctx.fillStyle = "red";
+            ctx.fillText("Hello World topicos", 0, 50)
+        </script>
+
+    </canvas>
+
+    <br><hr><br>
+    <canvas id="myCanvas4" width="500" height="300" style="border: 1px solid #ddd;">
+
+    </canvas>
+
+    <br><hr><br>
+    <canvas id="myCanvas5" width="500" height="300" style="border: 1px solid #ddd;">
+        
+
+    </canvas>
+
+    <br><hr><br>
+    <h2>Relleno degradado linear</h2>
+    <canvas id="myCanvas6" width="500" height="300" style="border: 1px solid #ddd;">
+    Navegador no soporta canvas.
+    </canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("myCanvas6");
+        var ctx = c.getContext("2d");
+        var grd = ctx.createLinearGradient(30, 90, 30, 30);
+        grd.addColorStop(0, "purple");
+        grd.addColorStop(1, "yellow");
+        ctx.fillStyle = grd;
+        ctx.fillRect(150, 10, 150, 180);
+    </script>
+
+
+    <br><hr><br>
+    <h2>Relleno degradado circular</h2>
+    <canvas id="myCanvas7" width="500" height="300" style="border: 1px solid #ddd;">
+    Navegador no soposrta canvas
+    </canvas>
+
+    <script type = "text/javascript">
+        var c = document.getElementById("myCanvas7");
+        var ctx = c.getContext("2d");
+        var grd = ctx.createRadialGradient(55, 60, 35, 70, 70, 180);
+        grd.addColorStop(0 , "white");
+        grd.addColorStop(1 , "orange");
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 250, 280);
+    </script>
+
+    
+
+    <br><hr><br>
+    <h2>Imagen</h2>
+    <canvas id="myCanvas8" width="500" height="300" style="border: 1px solid #ddd;">
+        Navegador no soporta canvas.
+    </canvas>
+    <script type = "text/javascript">
+        var c = document.getElementById("myCanvas8");
+        var ctx = c.getContext("2d");
+        var imagen = new Image();
+        imagen.src = 'https://media.istockphoto.com/id/1086267840/photo/fuji-mountain-and-cherry-blossoms-in-spring-japan.jpg?s=170667a&w=0&k=20&c=LpxqshRAYJmw4eV2SSiGt-jibeWSds4xtNx_jivMbPU='
+        ctx.drawImage(imagen, 0, 0);
+    </script>
+
+
+    <br><hr><br>
+    <canvas id="myCanvas5" width="500" height="300" style="border: 1px solid #ddd;">
+        
+    </canvas>
+
+    <br><hr><br>
+    <canvas id="myCanvas5" width="500" height="300" style="border: 1px solid #ddd;">
+        
+    </canvas>
+
+
+
+    
+</body>
+</html>
