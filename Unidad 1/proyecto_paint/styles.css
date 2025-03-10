@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8dddbc;
+}
+
+h1 {
+    color: hsl(133, 78%, 21%);
+}
+
+.div1{
+    display: flex;
+    justify-content: space-between; /* Espacio entre los dos elementos */
+    align-items: flex-start; /* Alineación en la parte superior */
+    padding: 10px;
+    background-color: #777070;
+    color: hsl(133, 78%, 21%);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.myCanvas1 {
+    background-color: white;
+    margin-right: 20px;
+}
+
+
+.table1{
+    width: 10%;
+    gap: 50px;
+}
+
+.table1 th, .table1 td {
+    border: 0.8px solid black;
+    background-color: hsl(133, 42%, 50%);
+    max-width: 100%;       /* Para evitar que las imágenes se desborden */
+    height: auto;          /* Mantiene la proporción de la imagen */
+    text-align: center; /* Centrar las imágenes */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+.table1 td.selected, .table1 td:hover {
+    background-color: hsl(133, 72%, 25%);
+}
+
+.table1 td.selected img, .table1 td:hover img {
+    filter: invert(1) brightness(100%) grayscale(100%);
+}
+
+
+.table1 td:hover {
+    background-color: hsl(133, 72%, 25%);
+}
+.table1 td:hover img {
+    filter: invert(1) brightness(100%) grayscale(100%);
+}
+
+.tool-button{
+    width: 36px; /* Ajusta el tamaño del botón */
+    cursor: pointer;
+    text-align: center; /* Centrar las imágenes */
+    vertical-align: middle; /* Alineación vertical */
+}
+
+/* Estilos para el range */
+input[type="range"] {
+    width: 80%;
+    margin: 10px 0;
+}
+
+/* Estilos para el valor mostrado */
+#sizeValue {
+    margin-left: 10px;
+    font-size: 20px;
+    color: hsl(133, 78%, 21%);
+    font-weight: bold;
+}
+
+#sizeValue.selected, #sizeSliderRow:hover #sizeValue {
+    background-color: hsl(133, 72%, 25%);
+    color: white;
+}
+
+
+
+#lineWidthValue {
+    margin-left: 10px;
+    font-size: 20px;
+    color: hsl(133, 78%, 21%);
+    font-weight: bold;
+}
+
+#lineWidthValue.selected {
+    background-color: hsl(133, 72%, 25%);
+    color: white;
+}
+
+
+
+
+

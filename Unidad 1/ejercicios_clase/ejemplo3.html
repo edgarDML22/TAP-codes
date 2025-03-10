@@ -20,7 +20,7 @@
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
         ctx.moveTo(0,0);
-        ctx.lineTo(500, 400);
+        ctx.lineTo(200, 400);
         ctx.stroke();
     </script>
 
@@ -29,30 +29,32 @@
     <br><hr><br>
     <h2> Circulos </h2>
     <canvas id = "myCanvas2" width="300" height="300" style="border:1px solid #ddd">
-        <script type="text/javascript">
-            var c = document.getElementById("myCanvas2");
-            var ctx = c.getContext("2d");
-            ctx.beginPath();
-            ctx.beginPath();
-            ctx.arc(150,150,80,0,(2)*Math.PI);   
-            ctx.fillStyle = "green";
-            ctx.fill();         
-            ctx.stroke();
-        </script>
+        
     </canvas>
+    <script type="text/javascript">
+        var c = document.getElementById("myCanvas2");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.beginPath();
+        ctx.arc(150,150,80,0,(2)*Math.PI);   
+        ctx.fillStyle = "green";
+        ctx.fill();         
+        ctx.stroke();
+    </script>
 
     <br><hr><br>
-    <canvas id="myCanvas3" width="500" height="300" style="border:1px solid green;">
+    <h2> Ejemplo 3 </h2>
+    <canvas id="myCanvas3" width="500" height="300" style="border:1px solid green;"></canvas>
         <!-- Texto -->
         <script type="text/javascript">
-            var c = document.getElementById("miCanvas3");
+            var c = document.getElementById("myCanvas3");
             var ctx = c.getContext("2d");
-            ctx.font = "60px Arial";
+            ctx.font = "30px Arial";
             ctx.fillStyle = "red";
             ctx.fillText("Hello World topicos", 0, 50)
         </script>
 
-    </canvas>
+    
 
     <br><hr><br>
     <canvas id="myCanvas4" width="500" height="300" style="border: 1px solid #ddd;">
@@ -113,15 +115,7 @@
     </script>
 
 
-    <br><hr><br>
-    <canvas id="myCanvas5" width="500" height="300" style="border: 1px solid #ddd;">
-        
-    </canvas>
 
-    <br><hr><br>
-    <canvas id="myCanvas5" width="500" height="300" style="border: 1px solid #ddd;">
-        
-    </canvas>
 
 
 
